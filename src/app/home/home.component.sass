@@ -1,0 +1,58 @@
+$dekstop: 1200px
+$laptop: 1024px
+$tablet: 768px
+$phone: 480px
+
+mat-sidenav-container 
+    height: 100%
+    width: 100%
+mat-sidenav
+    width: 15%
+    background-color: rgba(140, 224, 147, 0.8)
+mat-toolbar
+    justify-content: space-between
+    background-color: #4f9c6a
+h1
+    font-size: 2rem
+    font-family: 'Tiro Kannada', serif
+    padding: 1rem 0
+.sideNavMain
+    display: flex
+    flex-direction: column
+    gap: 1em
+    text-align: center
+.teaTypeText
+    text-decoration: none
+    color: black
+    font-size: 1rem
+    font-weight: 500
+    padding: 1.5rem 0.5rem
+.teaTypeText:hover
+    background-color: rgba(140, 224, 147, 0.9)
+.main
+    height: 100%
+    width: 100%    
+    background-color: #8ce093
+    overflow: auto
+    display: flex
+    gap: 2rem
+    flex-direction: column
+    place-items: center
+    scroll-behavior: smooth
+    align-content: space-between
+    align-items: stretch
+    justify-content: flex-start
+.sideNavMain
+    display: flex
+    flex-direction: column
+    gap: 1em
+button, .mat-icon
+    cursor: pointer
+@media screen and (max-width: $laptop)
+    mat-sidenav
+        width: 100%
+        .teaTypeText
+            font-size: 1.5rem
+            font-weight: 400
+        .sideTitle
+            font-size: 2rem

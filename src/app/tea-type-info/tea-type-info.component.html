@@ -1,0 +1,47 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" (click)="sidenav.toggle()">
+        <div class="sideNavMain">
+            <h1 class="sideTitle">TEA TYPES</h1>
+            <a *ngFor="let tea of teaTypes"
+            class="teaTypeText"
+            [routerLink]="['/',tea.name]">{{tea.name}}
+            </a>
+            <button
+            mat-stroked-button
+            (click)="goBack()">
+            Home
+            </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div *ngFor="let type of typesOfTea" class="main">
+            <mat-toolbar>
+                <button mat-icon-button
+                    (click)="sidenav.toggle()"
+                    class="example-icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <h1>{{type.name}}</h1>
+                <mat-icon (click)="goBack()">arrow_back</mat-icon>
+            </mat-toolbar>
+            <div class="teaLayout">
+                <div class="teaImage">
+                    <img src="{{type.imgUrl}}" alt="{{type.name}}">
+                </div>
+                <div id="teaText" class="teaInfo">{{type.info}}</div>
+                <div id="teaText" class="teaRecipe">
+                    <mat-divider></mat-divider>
+                    <br>
+                    <h2 class="titleText">RECIPES</h2>
+                    {{type.recipe}}
+                </div>
+                <div id="teaText" class="teaHistory">
+                    <mat-divider></mat-divider>
+                    <br>
+                    <h2 class="titleText">HISTORY</h2>
+                    {{type.history}}
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

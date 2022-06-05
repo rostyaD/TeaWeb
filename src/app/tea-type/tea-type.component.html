@@ -1,0 +1,12 @@
+<mat-card class="tea-card" *ngFor="let tea of teaTypes">
+    <mat-card-header>
+      <mat-card-title>{{tea.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{tea.imgUrl}}
+    alt="Photo of the tea">
+    <mat-card-actions>
+        <button mat-stroked-button
+        [routerLink]="['/',tea.name]"
+        routerLinkActive="active">More</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,32 @@
+$dekstop: 1200px
+$laptop: 1024px
+$tablet: 768px
+$phone: 480px
+
+:host 
+    display: grid
+    grid-auto-columns: 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr
+    gap: 1rem
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: space-around
+    justify-content: space-evenly
+    align-items: center
+    justify-items: center
+mat-card
+    display: flex
+    flex-direction: column
+    width: 55%
+    height: 35vh
+    font-size: 1rem
+    background-color: #4f9c6a
+    justify-content: space-around
+@media screen and (max-width: $laptop)
+    :host 
+        grid-template-columns: 1fr
+        margin-bottom: 1rem
+    mat-card
+        width: 70%
+        height: 40vh
